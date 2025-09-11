@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>職業技能手冊</title>
+<style>
+body{font-family:ui-sans-serif,system-ui,"Noto Sans TC","PingFang TC";background:#0b1020;color:#eef3ff;margin:0}
+header{position:sticky;top:0;background:#0f1730;border-bottom:1px solid #1d2a52;padding:12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 12px}
+.controls{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;gap:8px}
+input,select{padding:8px 10px;background:#0b1630;color:#e6ecff;border:1px solid #223158;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;padding:16px 0 40px}
+.card{background:#111a36;border:1px solid #23305a;border-radius:14px;padding:12px}
+.pill{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid #2f467a;background:#0d1630;color:#9fc5ff}
+.meta{opacity:.7;font-size:12px}
+</style></head>
+<body>
+<header><div class="wrap">
+  <h1>職業技能手冊</h1>
+  <div class="controls">
+    <input id="q" placeholder="🔎 搜尋：技能 / 職業 / ID"/>
+    <select id="job"><option value="">職業（全部）</option></select>
+    <select id="type"><option value="">類型（全部）</option><option value="active">主動</option><option value="passive">被動</option></select>
+    <select id="target"><option value="">目標（全部）</option><option value="enemy">敵方</option><option value="self">自身</option><option value="team">我方全體</option><option value="allyTeam">我方全體(allyTeam)</option></select>
+    <select id="tier"><option value="">轉職階層（全部）</option><option value="1">一轉</option><option value="2">二轉</option><option value="3">三轉</option></select>
+  </div>
+  <div class="meta" id="meta"></div>
+</div></header>
+<main><div class="wrap"><div id="grid" class="grid"></div></div></main>
+<script>
+let ALL=[], FILTERED=[];
+fetch('./skills.json').then(r=>r.json()).then(({meta, skills})=>{
+  ALL = skills;
+  document.getElementById('meta').textContent = '共 ' + skills.length + ' 技能｜更新：' + new Date(meta.lastUpdated).toLocaleString();
+  buildJobOptions(skills); apply();
+});
+function buildJobOptions(skills){
+  const set = new Set(skills.map(s=>s.jobName).filter(Boolean));
+  const sel = document.getElementById('job');
+  [...set].sort((a,b)=>a.localeCompare(b,'zh-Hant')).forEach(j=>{
+    const o = document.createElement('option'); o.value=j; o.textContent=j; sel.appendChild(o);
+  });
+}
+function mapTarget(t){ return ({enemy:'敵方', self:'自身', team:'我方全體', allyTeam:'我方全體(allyTeam)'})[t] || t || '—'; }
+function fmtScaling(sc){const ks=Object.keys(sc||{});return ks.length?ks.map(k=>k+'×'+sc[k]).join('、'):'—'}
+function pct(n){return Math.round((Number(n||0))*100)+'%'}
+function fmtEffects(e){
+  if(!e||!Object.keys(e).length) return '—';
+  const out=[];
+  if(e.stun) out.push('暈眩 '+e.stun.duration+'s');
+  if(e.mark) out.push('標記 受傷+'+pct(e.mark.damageTakenUp)+' 持續'+(e.mark.duration||'-')+'s');
+  if(e.teamDamageReduce) out.push('隊伍減傷 '+pct(e.teamDamageReduce.amount)+' 持續'+e.teamDamageReduce.duration+'s');
+  if(e.selfBuff?.damageReduce) out.push('自我減傷 '+pct(e.selfBuff.damageReduce.amount)+' 持續'+e.selfBuff.damageReduce.duration+'s');
+  if(e.defensePierce) out.push('穿透 +'+pct(e.defensePierce));
+  if(e.followUpChance) out.push('追擊機率 +'+pct(e.followUpChance));
+  if(e.followUpMultiplier) out.push('追擊倍率 '+pct(e.followUpMultiplier));
+  if(e.forceCrit) out.push('必爆');
+  if(e.trueDamage?.ratio) out.push('真實傷害 '+pct(e.trueDamage.ratio));
+  if(e.lowHpDamageUp) out.push('斬殺閾值 '+pct(e.lowHpDamageUp.threshold)+'，加成 '+pct(e.lowHpDamageUp.bonus));
+  if(e.critRateBonus) out.push('爆擊率 +'+pct(e.critRateBonus));
+  if(e.damageUp) out.push('增傷 +'+pct(e.damageUp));
+  if(e.healUp) out.push('受療 +'+pct(e.healUp));
+  return out.join(' / ');
+}
+function fmtStars(ss){ return (ss||[]).map(x=>'★'+x.star+'×'+x.multiplier).join(' ， ') || '—'; }
+function card(s){
+  return `<div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+      <h3 style="margin:0">${s.name}</h3><span class="pill">Tier ${s.tier}</span>
+    </div>
+    <div style="opacity:.95;margin:6px 0 10px">${s.description||''}</div>
+    <div style="font-size:12px;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+      <span>職業：${s.jobName||'—'}</span><span>類型：${s.type}</span><span>目標：${mapTarget(s.target)}</span><span>冷卻：${s.cooldownSec??'-'}s</span><span>ID：${s.id}</span>
+    </div>
+    <details><summary>數據 / 升星</summary>
+      <div>倍率：${fmtScaling(s.scaling)}</div>
+      <div>效果：${fmtEffects(s.effects)}</div>
+      <div style="margin-top:6px">星等乘數：${fmtStars(s.starSpread)}</div>
+    </details>
+  </div>`;
+}
+function apply(){
+  const q = (document.getElementById('q').value||'').toLowerCase();
+  const job = document.getElementById('job').value;
+  const type = document.getElementById('type').value;
+  const target = document.getElementById('target').value;
+  const tier = document.getElementById('tier').value;
+
+  FILTERED = ALL.filter(s=>{
+    if (q) {
+      const hay = (s.name+' '+s.id+' '+(s.jobName||'')+' '+(s.description||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (job && s.jobName !== job) return false;
+    if (type && s.type !== type) return false;
+    if (target && s.target !== target) return false;
+    if (tier && String(s.tier) !== tier) return false;
+    return true;
+  });
+
+  document.getElementById('grid').innerHTML = FILTERED.map(card).join('');
+}
+['q','job','type','target','tier'].forEach(id=>{
+  const el = document.getElementById(id);
+  if (el) { el.addEventListener('input', apply); el.addEventListener('change', apply); }
+});
+</script>
+</body></html>
