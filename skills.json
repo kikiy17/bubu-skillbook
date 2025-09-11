@@ -1,0 +1,6014 @@
+{
+  "meta": {
+    "lastUpdated": "2025-09-11T23:01:06.200Z",
+    "total": 65
+  },
+  "skills": [
+    {
+      "id": "act_noviceNinja_kunai",
+      "name": "合體．牙通牙",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "下忍",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "AGI": 0.8
+      },
+      "effects": {
+        "followUpChance": 0.1,
+        "followUpMultiplier": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "followUpChance": 0.15
+          }
+        }
+      },
+      "description": "手中苦無呼嘯而出，銳利氣息劃破黑夜，如狼牙般致命。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_noviceNinja_substitute",
+      "name": "忍術．替身術",
+      "tier": 1,
+      "type": "active",
+      "target": "self",
+      "jobName": "下忍",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {},
+      "effects": {
+        "guaranteedDodge": 2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "guaranteedDodge": 5
+          }
+        }
+      },
+      "description": "在生死一瞬間，替身木樁化解必殺，殘影消散如幻夢。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_noviceNinja_fleet",
+      "name": "火之意志",
+      "tier": 1,
+      "type": "passive",
+      "target": "self",
+      "jobName": "下忍",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "dodgeUp": 0.06,
+        "trueDamage": 0.05
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "燃燒不滅的火之信念，讓身軀在危機中化為閃光。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_beginner_throwStone",
+      "name": "投擲術",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "布布村冒險者",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "END": 0.3,
+        "STR": 0.3
+      },
+      "effects": {},
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {}
+      },
+      "description": "目標：敵方｜效果：",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_beginner_beginnerHeart",
+      "name": "燃燒我的小宇宙",
+      "tier": 1,
+      "type": "passive",
+      "target": "self",
+      "jobName": "布布村冒險者",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "critRateBonus": 0.05
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "目標：自身｜效果：",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_soul_bond",
+      "name": "武魂共鳴",
+      "tier": 1,
+      "type": "active",
+      "target": "self",
+      "jobName": "武魂使",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {},
+      "effects": {
+        "selfBuff": {
+          "statsUp": {
+            "pokemonAttackBonus": 0.2
+          },
+          "duration": 25
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "selfBuff": {
+              "statsUp": {
+                "pokemonAttackBonus": 0.3
+              },
+              "duration": 35
+            }
+          }
+        }
+      },
+      "description": "魂與身交融，戰意回蕩，力量隨之倍增。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_soul_infuse",
+      "name": "魂力灌注",
+      "tier": 1,
+      "type": "active",
+      "target": "self",
+      "jobName": "武魂使",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {},
+      "effects": {
+        "nextSkillDamageUp": 0.35
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "5": {
+            "nextSkillDamageUp": 0.4
+          },
+          "10": {
+            "nextSkillDamageUp": 0.5
+          }
+        }
+      },
+      "description": "將靈魂之力灌注於下一擊，誓要以毀滅性的力量粉碎阻礙。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_soul_pact",
+      "name": "靈魂契約",
+      "tier": 1,
+      "type": "passive",
+      "target": "self",
+      "jobName": "武魂使",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "pokemonAttackBonus": 0.2,
+        "specialAttackDamage": 0.08
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "與武魂簽下血之契約，換來永不熄滅的戰意。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_mage_firebolt",
+      "name": "魔力爪",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "法師",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "INT": 0.5,
+        "LUCK": 0.3
+      },
+      "effects": {
+        "critRateBonus": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "forceCrit": true
+          }
+        }
+      },
+      "description": "揮爪撕裂空氣，燃燒的魔力化為利刃，直取敵人要害。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_mage_iceShard",
+      "name": "魔靈彈",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "法師",
+      "intent": null,
+      "cooldownSec": 8,
+      "scaling": {
+        "INT": 0.5
+      },
+      "effects": {},
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "defensePierce": 0.1
+          }
+        }
+      },
+      "description": "凝聚冰霜魔靈，射出的瞬間彷彿能將空氣都凍結。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_mage_elementAffinity",
+      "name": "元素親和",
+      "tier": 1,
+      "type": "passive",
+      "target": "self",
+      "jobName": "法師",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "specialAttackDamage": 0.12,
+        "strongAgainstBonus": 0.08
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "血脈與元素共鳴，呼吸之間便能驅動天地的力量。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_rogue_backstab",
+      "name": "月下暗殺",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "盜賊",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "AGI": 0.7,
+        "LUCK": 0.2
+      },
+      "effects": {
+        "conditional": {
+          "ifTargetHpAbove": 0.5,
+          "critRateBonus": 0.1
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "defensePierce": 0.2
+          }
+        }
+      },
+      "description": "黑暗中的一擊，冷光閃爍之時，敵人已無法呼吸。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_rogue_venomBlade",
+      "name": "蛇噬之牙",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "盜賊",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "AGI": 0.2,
+        "LUCK": 0.7
+      },
+      "effects": {
+        "mark": {
+          "damageTakenUp": 0.1,
+          "duration": 10
+        },
+        "followUpChance": 0.05,
+        "followUpMultiplier": 0.1
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "5": {
+            "mark": {
+              "damageTakenUp": 0.15,
+              "duration": 10
+            },
+            "followUpChance": 0.1
+          },
+          "10": {
+            "forceCrit": true
+          }
+        }
+      },
+      "description": "塗滿劇毒的刀鋒，一旦劃破皮膚，痛楚便會如影隨形。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_rogue_killerInstinct",
+      "name": "致命直覺",
+      "tier": 1,
+      "type": "passive",
+      "target": "self",
+      "jobName": "盜賊",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "dodgeUp": 0.05,
+        "critRateBonus": 0.08
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "危險的本能指引，讓身體在最致命的瞬間做出反應。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_warrior_shieldBash",
+      "name": "盾擊",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "戰士",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "END": 0.9,
+        "STR": 0.1
+      },
+      "effects": {
+        "stun": {
+          "amount": 1,
+          "duration": 5
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "5": {
+            "stun": {
+              "amount": 1,
+              "duration": 10
+            }
+          },
+          "10": {
+            "defensePierce": 0.1
+          }
+        }
+      },
+      "description": "舉起沉重的盾牌，狠狠砸向敵人！那一瞬，天地似乎都為之停滯。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_warrior_heavySlash",
+      "name": "重斬",
+      "tier": 1,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "戰士",
+      "intent": null,
+      "cooldownSec": 15,
+      "scaling": {
+        "STR": 0.9,
+        "END": 0.1
+      },
+      "effects": {},
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "5": {
+            "defensePierce": 0.1
+          },
+          "10": {
+            "defensePierce": 0.2
+          }
+        }
+      },
+      "description": "將全身的力量凝聚於刀刃，揮出足以撕裂大地的霸道斬擊。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_warrior_ironWill",
+      "name": "鋼鐵意志",
+      "tier": 1,
+      "type": "passive",
+      "target": "self",
+      "jobName": "戰士",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "blockUp": 0.08,
+        "healUp": 0.1,
+        "recoveryReduce": 0.05
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t1_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "心如鋼鐵，無論再猛烈的攻擊也無法動搖其信念。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_berserker_furyCombo",
+      "name": "狂亂斬．不屈不撓",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "八殺卡",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "STR": 1.3,
+        "END": 0.2
+      },
+      "effects": {
+        "critRateBonus": 0.1,
+        "lowHpDamageUp": {
+          "threshold": 0.35,
+          "bonus": 0.25
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "critRateBonus": 0.2
+          }
+        }
+      },
+      "description": "瘋狂揮舞的刀刃化為暴風，敵人無處可逃。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_berserker_bloodRite",
+      "name": "神性．血怒",
+      "tier": 2,
+      "type": "active",
+      "target": "self",
+      "jobName": "八殺卡",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {},
+      "effects": {
+        "payHpRatio": 0.2,
+        "nextSkillDamageUp": 0.5
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "nextSkillDamageUp": 0.75
+          }
+        }
+      },
+      "description": "以鮮血為代價喚醒狂怒，下一擊即是毀滅的審判。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_berserker_bloodlust",
+      "name": "寶具．十二試煉",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "八殺卡",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "critRateBonus": 0.08,
+        "damageUp": 0.1
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "浴血而生，痛苦只會讓戰意更為熾烈。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_chunin_talisman",
+      "name": "忍術．櫻吹雪",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "中忍",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 0.7,
+        "LUCK": 0.5
+      },
+      "effects": {
+        "mark": {
+          "damageTakenUp": 0.1,
+          "duration": 10
+        },
+        "followUpChance": 0.1,
+        "followUpMultiplier": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "mark": {
+              "damageTakenUp": 0.15,
+              "duration": 20
+            },
+            "followUpChance": 0.2
+          }
+        }
+      },
+      "description": "櫻花飛舞之時，暗藏殺機的手裡劍化作致命風暴。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_chunin_shadowClone",
+      "name": "秘術．多重影分身術",
+      "tier": 2,
+      "type": "active",
+      "target": "self",
+      "jobName": "中忍",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 1.6
+      },
+      "effects": {
+        "followUpChance": 0.1,
+        "followUpMultiplier": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "followUpChance": 0.2
+          }
+        }
+      },
+      "description": "影分身疾步而出，數道身影同時出擊，難辨真偽。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_chunin_flow",
+      "name": "雷之意志",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "中忍",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "trueDamage": 0.1
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "雷霆意志環繞全身，攻擊中閃爍著毀滅真雷。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_spirit_overcharge",
+      "name": "術式「十種影法術」",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "咒術師",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "INT": 1.4
+      },
+      "effects": {
+        "defensePierce": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "defensePierce": 0.35
+          }
+        }
+      },
+      "description": "影法術瞬息展開，黑影與本體齊攻，無處遁形。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_spirit_doubleBond",
+      "name": "術式「赤血操術」",
+      "tier": 2,
+      "type": "active",
+      "target": "self",
+      "jobName": "咒術師",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {},
+      "effects": {
+        "selfBuff": {
+          "statsUp": {
+            "pokemonAttackBonus": 0.3
+          },
+          "duration": 25
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "selfBuff": {
+              "statsUp": {
+                "pokemonAttackBonus": 0.4
+              },
+              "duration": 35
+            }
+          }
+        }
+      },
+      "description": "以赤血操縱生命，靈力在身軀間奔湧燃燒。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_spirit_resonance",
+      "name": "領域展開",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "咒術師",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "pokemonCriticalRateBonus": 0.2,
+        "pokemonCritDamageBonus": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "領域展開——所有靈魂的力量在此刻共鳴。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_assassin_toxicStrike",
+      "name": "一斬必殺「村雨」",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "夜襲",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "LUCK": 1,
+        "AGI": 0.2
+      },
+      "effects": {
+        "forceCrit": true,
+        "followUpChance": 0.1,
+        "followUpMultiplier": 0.2,
+        "mark": {
+          "damageTakenUp": 0.1,
+          "duration": 10
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "followUpChance": 0.15,
+            "mark": {
+              "damageTakenUp": 0.15,
+              "duration": 15
+            }
+          }
+        }
+      },
+      "description": "村雨出鞘的剎那，血與毒在傷口間同時綻放。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_assassin_execute",
+      "name": "帝具「惡鬼纏身」",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "夜襲",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 1,
+        "LUCK": 0.6
+      },
+      "effects": {
+        "conditional": {
+          "ifTargetHpBelow": 0.5,
+          "damageUp": 0.3
+        },
+        "defensePierce": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "conditional": {
+              "ifTargetHpBelow": 0.5,
+              "damageUp": 0.45
+            }
+          }
+        }
+      },
+      "description": "惡鬼纏身般的身影一閃，敵人的生命瞬間被奪去。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_assassin_murderous",
+      "name": "惡魔之粹",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "夜襲",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "critRateBonus": 0.1,
+        "damageUp": 0.05
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "邪惡的氣息縈繞四周，每一次出手都帶著殺戮本能。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_cleric_sanctBarrier",
+      "name": "軍團聖盾",
+      "tier": 2,
+      "type": "active",
+      "target": "team",
+      "jobName": "索拉卡",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {},
+      "effects": {
+        "teamDamageReduce": {
+          "amount": 0.2,
+          "duration": 15
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "teamDamageReduce": {
+              "amount": 0.25,
+              "duration": 25
+            }
+          }
+        }
+      },
+      "description": "聖潔屏障展開，如軍團之盾守護所有同伴。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_cleric_massHeal",
+      "name": "Ｒ．祈願",
+      "tier": 2,
+      "type": "active",
+      "target": "team",
+      "jobName": "索拉卡",
+      "intent": "heal",
+      "cooldownSec": 30,
+      "scaling": {
+        "INT": 0.9,
+        "END": 0.6
+      },
+      "effects": {
+        "heal": true
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ]
+      },
+      "description": "舉起雙手祈願，溫柔光芒灑落，撫平所有傷痛。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_cleric_purity",
+      "name": "聖潔之心",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "索拉卡",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "healUp": 0.15,
+        "healBase": 8
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "純潔之心閃耀，化為治癒的泉源，滋潤每一道傷口。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_sorcerer_meteor",
+      "name": "去去．武器走 Expelliarmus",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "傲羅",
+      "intent": null,
+      "cooldownSec": 10,
+      "scaling": {
+        "INT": 0.8
+      },
+      "effects": {},
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "defensePierce": 0.2
+          }
+        }
+      },
+      "description": "一聲咒語，武器脫手飛舞，將敵人徹底擊退。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_sorcerer_thunder",
+      "name": "爆裂咒 Confringo",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "傲羅",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "INT": 1.5
+      },
+      "effects": {
+        "defensePierce": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "forceCrit": true
+          }
+        }
+      },
+      "description": "魔力爆裂如焚天之炎，轟擊敵陣，無可倖免。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_sorcerer_charge",
+      "name": "純正血統",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "傲羅",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "specialAttackDamage": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "高貴血脈使魔力更純粹，每一擊都帶有毀滅的重量。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_knight_holySmash",
+      "name": "Ｒ．日輪聖芒",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "雷歐娜",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "STR": 0.8,
+        "END": 1
+      },
+      "effects": {
+        "selfBuff": {
+          "damageReduce": {
+            "amount": 0.2,
+            "duration": 15
+          }
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "selfBuff": {
+              "damageReduce": {
+                "amount": 0.25,
+                "duration": 25
+              }
+            }
+          }
+        }
+      },
+      "description": "高舉聖盾，烈日之力凝聚於一擊，彷彿將黑暗轟碎。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_knight_guardStance",
+      "name": "Ｗ．日蝕",
+      "tier": 2,
+      "type": "active",
+      "target": "team",
+      "jobName": "雷歐娜",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {
+        "END": 1
+      },
+      "effects": {
+        "teamDamageReduce": {
+          "amount": 0.15,
+          "duration": 15
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "5": {
+            "teamDamageReduce": {
+              "amount": 0.2,
+              "duration": 25
+            }
+          },
+          "10": {
+            "teamDamageReduce": {
+              "amount": 0.25,
+              "duration": 25
+            }
+          }
+        }
+      },
+      "description": "以自身化作日蝕之壁，為同伴遮蔽一切災厄。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_knight_blessing",
+      "name": "烈陽之力",
+      "tier": 2,
+      "type": "passive",
+      "target": "allyTeam",
+      "jobName": "雷歐娜",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "teamDamageReduceAura": 0.06,
+        "blockUp": 0.06
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "烈陽的祝福環繞全身，夥伴在光輝下無所畏懼。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_ranger_snipe",
+      "name": "小傑．猜猜拳剪刀",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "職業獵人",
+      "intent": null,
+      "cooldownSec": 35,
+      "scaling": {
+        "AGI": 0.8,
+        "LUCK": 0.7
+      },
+      "effects": {},
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "forceCrit": true
+          }
+        }
+      },
+      "description": "凝神瞄準，子彈如流星般擊穿敵人弱點。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_ranger_trap",
+      "name": "西索．伸縮自如的愛",
+      "tier": 2,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "職業獵人",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "LUCK": 1,
+        "AGI": 0.1
+      },
+      "effects": {
+        "atkDown": {
+          "amount": 0.25,
+          "duration": 20
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "mark": {
+              "damageTakenUp": 0.1,
+              "duration": 20
+            }
+          }
+        }
+      },
+      "description": "看似無形的陷阱在敵人腳下緊扣，掙扎只會更痛。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_ranger_mark",
+      "name": "獵人執照",
+      "tier": 2,
+      "type": "passive",
+      "target": "self",
+      "jobName": "職業獵人",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "critRateBonus": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t2_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "獵人印記加身，下一擊將如死神的鎌刀。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_jounin_forbiddenShadowBurst",
+      "name": "水遁‧大鮫彈之術",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "上忍",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 1.2,
+        "INT": 1
+      },
+      "effects": {
+        "trueDamage": {
+          "ratio": 0.2
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "trueDamage": {
+              "ratio": 0.35
+            }
+          }
+        }
+      },
+      "description": "大鮫彈如深海巨獸般張口吞噬，真實之力無可抵擋。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_jounin_galeStep",
+      "name": "火遁‧火龍炎彈",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "上忍",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 1.2,
+        "STR": 1
+      },
+      "effects": {
+        "critRateBonus": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "trueDamage": {
+              "ratio": 0.3
+            }
+          }
+        }
+      },
+      "description": "火龍咆哮而出，烈焰吞噬前方一切。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_jounin_sealMastery",
+      "name": "火之意志",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "上忍",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "recoveryReduce": 0.12,
+        "trueDamage": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "火之意志銘刻於魂魄，壓制敵人，燃盡黑暗。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_archmage_starfall",
+      "name": "疾疾．護法現身 Expecto Patronum",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "正氣司",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "INT": 2
+      },
+      "effects": {
+        "selfBuff": {
+          "damageReduce": {
+            "amount": 0.2,
+            "duration": 10
+          }
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "selfBuff": {
+              "damageReduce": {
+                "amount": 0.25,
+                "duration": 20
+              }
+            }
+          }
+        }
+      },
+      "description": "護法之靈閃耀而出，黑暗在光明面前無所遁形。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_archmage_elementStorm",
+      "name": "撕淌三步殺　Sectumsempra",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "正氣司",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {
+        "LUCK": 1.5,
+        "INT": 0.5
+      },
+      "effects": {
+        "defensePierce": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "forceCrit": true
+          }
+        }
+      },
+      "description": "咒刃如風暴般撕裂空氣，留下難以癒合的傷痕。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_archmage_resonance",
+      "name": "魔法精通",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "正氣司",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "specialAttackDamage": 0.18
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "魔法的洪流奔湧，術者的力量遠超凡俗。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_spiritlord_soulBurst",
+      "name": "支配者之手",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "死靈法師",
+      "intent": null,
+      "cooldownSec": 20,
+      "scaling": {
+        "INT": 0.2,
+        "END": 0.6
+      },
+      "effects": {
+        "defensePierce": 0.2
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "defensePierce": 0.35
+      },
+      "description": "支配者之手自黑暗伸出，將敵人捏碎於掌中。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_spiritlord_soulEcho",
+      "name": "闇影軍團統領級．伊格利特",
+      "tier": 3,
+      "type": "active",
+      "target": "self",
+      "jobName": "死靈法師",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {},
+      "effects": {
+        "selfBuff": {
+          "statsUp": {
+            "pokemonAttackBonus": 0.4
+          },
+          "duration": 35
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "selfBuff": {
+              "statsUp": {
+                "pokemonAttackBonus": 0.5
+              },
+              "duration": 45
+            }
+          }
+        }
+      },
+      "description": "闇影軍團統領現身，亡魂咆哮迴盪，力量隨之高漲。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_spiritlord_domination",
+      "name": "統御",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "死靈法師",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "enemyCritRateDown": 0.05,
+        "enemyCritDamageDown": 0.1
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "靈魂的支配者睥睨戰場，敵方的殺意在威壓中潰散。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_warlord_obliterate",
+      "name": "二刀流",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "封弊者",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "STR": 2
+      },
+      "effects": {
+        "defensePierce": 0.25,
+        "execute": {
+          "threshold": 0.2,
+          "bonus": 0.25
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "defensePierce": 0.45
+          }
+        }
+      },
+      "description": "雙刃交錯，如暴風般斬碎敵人，無可倖免。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_warlord_bloodRage",
+      "name": "星爆氣流斬",
+      "tier": 3,
+      "type": "active",
+      "target": "self",
+      "jobName": "封弊者",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 1.5
+      },
+      "effects": {
+        "payHpRatio": 0.25,
+        "selfBuff": {
+          "defensePierce": 0.3,
+          "duration": 20
+        },
+        "critRateBonus": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "critRateBonus": 0.25
+          }
+        }
+      },
+      "description": "鮮血灑落的同時，狂戰的本能點燃，斬擊如流星墜落。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_warlord_armorBreaker",
+      "name": "封弊者",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "封弊者",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "defensePierce": 0.12,
+        "damageUp": 0.05
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "破甲之勢無可阻擋，敵人再厚重的防禦也將崩毀。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_marksman_trueShot",
+      "name": "伊里加爾的氣息",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "精靈油蝦",
+      "intent": null,
+      "cooldownSec": 20,
+      "scaling": {
+        "AGI": 0.25,
+        "LUCK": 1
+      },
+      "effects": {
+        "critRateBonus": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "forceCrit": true
+      },
+      "description": "伊里加爾的氣息凝聚成箭矢，決不容許偏離。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_marksman_piercingMoon",
+      "name": "獨角獸射擊",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "精靈油蝦",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 0.5,
+        "LUCK": 1.5
+      },
+      "effects": {
+        "defensePierce": 0.35
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "defensePierce": 0.45
+          }
+        }
+      },
+      "description": "獨角獸之箭破空，銀月為弦，直射敵陣心臟。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_marksman_huntersHeart",
+      "name": "伊修塔爾之環",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "精靈油蝦",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "damageUp": 0.15,
+        "criticalDamageBonus": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "獵人的心跳與大地共鳴，每一次出手皆為致命。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_shadowdancer_phantomFlurry",
+      "name": "無限月讀",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "曉",
+      "intent": null,
+      "cooldownSec": 35,
+      "scaling": {
+        "AGI": 1.8
+      },
+      "effects": {
+        "forceCrit": true,
+        "followUpChance": 0.05,
+        "followUpMultiplier": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "followUpChance": 0.2
+          }
+        }
+      },
+      "description": "月讀幻境中，無數斬擊如潮水般傾瀉而下。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_shadowdancer_shadowChase",
+      "name": "須佐能乎．十拳劍",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "曉",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "AGI": 2,
+        "LUCK": 0.5
+      },
+      "effects": {
+        "critRateBonus": 0.25,
+        "criticalDamageBonus": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "criticalDamageBonus": 0.35
+          }
+        }
+      },
+      "description": "須佐能乎現形，十拳之劍貫穿虛空，將敵魂封鎖。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_shadowdancer_dance",
+      "name": "萬花筒寫輪眼",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "曉",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "followUpChance": 0.05,
+        "followUpMultiplier": 0.15
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "萬花筒寫輪眼旋轉，映照出無盡的追擊幻影。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_hierophant_benediction",
+      "name": "召喚．醫療班",
+      "tier": 3,
+      "type": "active",
+      "target": "team",
+      "jobName": "蟲柱",
+      "intent": "heal",
+      "cooldownSec": 30,
+      "scaling": {
+        "INT": 1,
+        "END": 0.4
+      },
+      "effects": {
+        "heal": true
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "teamDamageReduce": {
+              "amount": 0.1,
+              "duration": 20
+            }
+          }
+        }
+      },
+      "description": "治療班的召喚響徹戰場，微光治癒一切傷痕。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_hierophant_hymn",
+      "name": "蝶之舞「嬉戲」",
+      "tier": 3,
+      "type": "active",
+      "target": "enemy",
+      "jobName": "蟲柱",
+      "intent": null,
+      "cooldownSec": 20,
+      "scaling": {
+        "LUCK": 1.7,
+        "INT": 0.5
+      },
+      "effects": {
+        "followUpChance": 0.15,
+        "followUpMultiplier": 0.25
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "5": {
+            "followUpChance": 0.3
+          },
+          "10": {
+            "forceCrit": true
+          }
+        }
+      },
+      "description": "蝶翅振舞，舞姿優雅卻暗藏致命殺意。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_hierophant_barrier",
+      "name": "蝶之呼吸",
+      "tier": 3,
+      "type": "passive",
+      "target": "self",
+      "jobName": "蟲柱",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "healUp": 0.25,
+        "healBase": 12
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "蝶之呼吸融入身軀，化作溫柔卻堅毅的生命之力。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    },
+    {
+      "id": "act_paladin_aegis",
+      "name": "卍解．大紅蓮冰輪丸",
+      "tier": 3,
+      "type": "active",
+      "target": "self",
+      "jobName": "護廷十番",
+      "intent": null,
+      "cooldownSec": 30,
+      "scaling": {
+        "STR": 0.5,
+        "END": 2
+      },
+      "effects": {
+        "selfBuff": {
+          "damageReduce": {
+            "amount": 0.2,
+            "duration": 15
+          }
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "selfBuff": {
+              "damageReduce": {
+                "amount": 0.25,
+                "duration": 20
+              }
+            }
+          }
+        }
+      },
+      "description": "冰龍振翅而出，結界環繞全身，化為不滅的守護。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "act_paladin_sanctuary",
+      "name": "絕招「四界冰結」",
+      "tier": 3,
+      "type": "active",
+      "target": "team",
+      "jobName": "護廷十番",
+      "intent": null,
+      "cooldownSec": 45,
+      "scaling": {
+        "STR": 0.2,
+        "END": 1.5
+      },
+      "effects": {
+        "teamDamageReduce": {
+          "amount": 0.3,
+          "duration": 15
+        }
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "scalingMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.06,
+          1.14,
+          1.21,
+          1.28,
+          1.35
+        ],
+        "extraEffectsByStar": {
+          "10": {
+            "teamDamageReduce": {
+              "amount": 0.35,
+              "duration": 30
+            }
+          }
+        }
+      },
+      "description": "四界瞬間封結，天地間只餘下冰之聖域。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.06
+        },
+        {
+          "star": 7,
+          "multiplier": 1.14
+        },
+        {
+          "star": 8,
+          "multiplier": 1.21
+        },
+        {
+          "star": 9,
+          "multiplier": 1.28
+        },
+        {
+          "star": 10,
+          "multiplier": 1.35
+        }
+      ]
+    },
+    {
+      "id": "pas_paladin_retaliate",
+      "name": "卍解",
+      "tier": 3,
+      "type": "passive",
+      "target": "allyTeam",
+      "jobName": "護廷十番",
+      "intent": null,
+      "cooldownSec": null,
+      "scaling": {},
+      "effects": {
+        "enemyCritRateDown": 0.05,
+        "teamDamageReduceAura": 0.08
+      },
+      "upgrade": {
+        "maxStars": 10,
+        "bookItemId": "book_t3_skill",
+        "costCurve": [
+          0,
+          1,
+          2,
+          3,
+          3,
+          5,
+          5,
+          8,
+          10,
+          10
+        ],
+        "passiveMultiplierPerStar": [
+          0.8,
+          0.85,
+          0.9,
+          0.95,
+          1,
+          1.07,
+          1.15,
+          1.23,
+          1.31,
+          1.4
+        ]
+      },
+      "description": "卍解之力釋放，寒意永恆，敵人的利刃盡失銳氣。",
+      "starSpread": [
+        {
+          "star": 1,
+          "multiplier": 0.8
+        },
+        {
+          "star": 2,
+          "multiplier": 0.85
+        },
+        {
+          "star": 3,
+          "multiplier": 0.9
+        },
+        {
+          "star": 4,
+          "multiplier": 0.95
+        },
+        {
+          "star": 5,
+          "multiplier": 1
+        },
+        {
+          "star": 6,
+          "multiplier": 1.07
+        },
+        {
+          "star": 7,
+          "multiplier": 1.15
+        },
+        {
+          "star": 8,
+          "multiplier": 1.23
+        },
+        {
+          "star": 9,
+          "multiplier": 1.31
+        },
+        {
+          "star": 10,
+          "multiplier": 1.4
+        }
+      ]
+    }
+  ]
+}

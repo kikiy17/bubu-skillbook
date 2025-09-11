@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>職業技能手冊</title>
+<style>
+body{font-family:ui-sans-serif,system-ui,"Noto Sans TC","PingFang TC";background:#0b1020;color:#eef3ff;margin:0}
+header{position:sticky;top:0;background:#0f1730;border-bottom:1px solid #1d2a52;padding:12px;z-index:10}
+.wrap{max-width:1080px;margin:0 auto;padding:0 12px}
+.controls{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr 1fr;gap:8px}
+input,select{padding:8px 10px;background:#0b1630;color:#e6ecff;border:1px solid #223158;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;padding:16px 0 40px}
+.card{background:#111a36;border:1px solid #23305a;border-radius:14px;padding:12px}
+.pill{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid #2f467a;background:#0d1630;color:#9fc5ff;white-space:nowrap}
+.meta{opacity:.7;font-size:12px}
+.small{font-size:12px;opacity:.9}
+.section{margin-top:6px}
+</style></head>
+<body>
+<header><div class="wrap">
+  <h1>🐻布布幻想職業技能手冊🐻</h1>
+  <div class="controls">
+    <input id="q" placeholder="🔎 搜尋：技能 / 職業 / 文字描述"/>
+    <select id="job"><option value="">職業（全部）</option></select>
+    <select id="type"><option value="">類型（全部）</option><option value="active">主動</option><option value="passive">被動</option></select>
+    <select id="target"><option value="">目標（全部）</option><option value="enemy">敵方</option><option value="self">自身</option><option value="team">我方全體</option><option value="allyTeam">我方全體(allyTeam)</option></select>
+    <select id="tier"><option value="">轉職階層（全部）</option><option value="1">一轉</option><option value="2">二轉</option><option value="3">三轉</option></select>
+  </div>
+  <div class="meta" id="meta"></div>
+</div></header>
+<main><div class="wrap"><div id="grid" class="grid"></div></div></main>
+<script>
+let ALL=[], FILTERED=[];
+const TIER_LABEL = {1:'一轉',2:'二轉',3:'三轉'};
+const TYPE_LABEL = {active:'主動', passive:'被動'};
+const TARGET_LABEL = {enemy:'敵方', self:'自身', team:'我方全體', allyTeam:'我方全體(allyTeam)'};
+
+fetch('./skills.json').then(r=>r.json()).then(({meta, skills})=>{
+  ALL = skills;
+  document.getElementById('meta').textContent = '共 ' + skills.length + ' 技能｜更新：' + new Date(meta.lastUpdated).toLocaleString();
+  buildJobOptions(skills); apply();
+});
+
+function buildJobOptions(skills){
+  const set = new Set(skills.map(s=>s.jobName).filter(Boolean));
+  const sel = document.getElementById('job');
+  [...set].sort((a,b)=>a.localeCompare(b,'zh-Hant')).forEach(j=>{
+    const o = document.createElement('option'); o.value=j; o.textContent=j; sel.appendChild(o);
+  });
+}
+
+function pct(n){return Math.round((Number(n||0))*100)+'%'}
+function mapTarget(t){ return TARGET_LABEL[t] || t || '—'; }
+function mapType(t){ return TYPE_LABEL[t] || t || '—'; }
+function mapTier(n){ return TIER_LABEL[n] || ('Tier '+n); }
+
+function fmtEffects(e, s){
+  if(!e||!Object.keys(e).length) return '—';
+  const out=[];
+  if(e.stun) out.push('暈眩 ' + e.stun.duration + 's');
+  if(e.mark) out.push('標記 受傷+' + pct(e.mark.damageTakenUp) + ' / ' + (e.mark.duration||'-') + 's');
+  if(e.teamDamageReduce) out.push('全體減傷 ' + pct(e.teamDamageReduce.amount) + ' / ' + e.teamDamageReduce.duration + 's');
+  if(e.selfBuff && e.selfBuff.damageReduce) out.push('自我減傷 ' + pct(e.selfBuff.damageReduce.amount) + ' / ' + e.selfBuff.damageReduce.duration + 's');
+  if(e.defensePierce) out.push('穿透 +' + pct(e.defensePierce));
+  if(e.followUpChance) out.push('追擊機率 +' + pct(e.followUpChance));
+  if(e.followUpMultiplier) out.push('追擊倍率 +' + pct(e.followUpMultiplier));
+  if(e.forceCrit) out.push('必定爆擊');
+  if(e.lowHpDamageUp) out.push('斬殺：目標HP低於 ' + pct(e.lowHpDamageUp.threshold) + '，加成 ' + pct(e.lowHpDamageUp.bonus));
+  if(e.damageUp) out.push('增傷 +' + pct(e.damageUp));
+
+   // 你新增的鍵
+  if (e.teamDamageReduceAura) out.push('常駐減傷光環 +' + pct(e.teamDamageReduceAura));
+  if (e.heal === true) out.push((s && s.target === 'team') ? '群體治療' : '治療');
+  if (e.healBase != null) out.push('基礎治療 +' + e.healBase);
+  if (e.atkDown) out.push('降攻 ' + pct(e.atkDown.amount) + ' / ' + e.atkDown.duration + 's');
+  if (e.pokemonCriticalRateBonus) out.push('武魂爆擊率 +' + pct(e.pokemonCriticalRateBonus));
+  if (e.pokemonCritDamageBonus) out.push('武魂爆傷 +' + pct(e.pokemonCritDamageBonus));
+  if (e.enemyCritRateDown) out.push('敵方爆擊率降低 ' + pct(e.enemyCritRateDown));
+  if (e.enemyCritDamageDown) out.push('敵方爆傷降低 ' + pct(e.enemyCritDamageDown));
+  if (e.execute && e.execute.threshold != null && e.execute.bonus != null)
+    out.push('斬殺：自身HP低於 ' + pct(e.execute.threshold) + ' 時，增傷 ' + pct(e.execute.bonus));
+  if (e.selfBuff && e.selfBuff.defensePierce != null)
+    out.push('自我穿透 +' + pct(e.selfBuff.defensePierce) + ' / ' + (e.selfBuff.duration || '-') + 's');
+  if (e.payHpRatio) out.push('自損HP ' + pct(e.payHpRatio));
+
+  // 防禦/治療類
+  if(e.blockUp) out.push('格擋 +' + pct(e.blockUp));
+  if(e.healUp) out.push('受療 +' + pct(e.healUp));
+  if(e.recoveryReduce) out.push('壓制回復 ' + pct(e.recoveryReduce));
+
+  // 命中相關
+  if (e.dodgeUp) out.push('閃避率 +' + pct(e.dodgeUp));
+  if (e.critRateBonus) out.push('爆擊率 +' + pct(e.critRateBonus));
+  if (e.criticalDamageBonus) out.push('爆傷 +' + pct(e.criticalDamageBonus));
+
+  // 真實傷害：數字或物件
+  if (typeof e.trueDamage === 'number') out.push('追加真實傷害 ' + pct(e.trueDamage));
+  else if (e.trueDamage && e.trueDamage.ratio) out.push('追加真實傷害 ' + pct(e.trueDamage.ratio));
+
+  // 奧義／剋制
+  if (e.specialAttackDamage) out.push('奧義傷害 +' + pct(e.specialAttackDamage));
+  if (e.strongAgainstBonus) out.push('克制傷害 +' + pct(e.strongAgainstBonus));
+
+  // 武魂攻擊（主動或被動）
+  if (e.pokemonAttackBonus) out.push('武魂攻擊 +' + pct(e.pokemonAttackBonus));
+  if (e.selfBuff && e.selfBuff.statsUp && e.selfBuff.statsUp.pokemonAttackBonus) {
+    const dur = (e.selfBuff.duration != null) ? (' / ' + e.selfBuff.duration + 's') : '';
+    out.push('武魂攻擊 +' + pct(e.selfBuff.statsUp.pokemonAttackBonus) + dur);
+  }
+
+  // 條件
+  if (e.conditional) {
+    const c = e.conditional;
+    if (c.ifTargetHpBelow != null && c.damageUp != null)
+      out.push('處決加成：目標HP低於 ' + pct(c.ifTargetHpBelow) + ' 時，增傷 ' + pct(c.damageUp));
+    if (c.ifTargetHpAbove != null && c.critRateBonus != null)
+      out.push('先手加成：目標HP高於 ' + pct(c.ifTargetHpAbove) + ' 時，爆擊率 +' + pct(c.critRateBonus));
+  }
+
+  if (e.guaranteedDodge) out.push('必定閃避 ' + e.guaranteedDodge + ' 次');
+  return out.join(' ／ ');
+}
+
+
+// 屬性加成（原「倍率」）：改名並放在「效果」之後展示
+function fmtScaling(sc){
+  const ks = Object.keys(sc||{});
+  return ks.length ? ('屬性加成：' + ks.map(k=>k+' ×'+sc[k]).join('、')) : '';
+}
+
+// 星等乘數標題：主動→技能傷害倍率，被動→被動屬性倍率
+function starTitleByType(t){ return t==='active' ? '技能傷害倍率' : '被動屬性倍率'; }
+function fmtStars(ss){ return (ss||[]).map(x=>'★'+x.star+' ×'+x.multiplier).join(' ｜ ') || '—'; }
+
+// 升星後效果（★5/★10/其他）展開
+function fmtStarExtras(upgrade){
+  var extras = (upgrade && upgrade.extraEffectsByStar) || {};
+  var keys = Object.keys(extras).map(function(n){ return Number(n); })
+    .sort(function(a,b){ return a-b; });
+  if (!keys.length) return '';
+  var lines = [];
+  for (var i=0;i<keys.length;i++){
+    var k = keys[i];
+    var ex = extras[k];
+
+    if (ex.forceCrit) lines.push('★' + k + ' → 必定爆擊');
+    if (ex.defensePierce) lines.push('★' + k + ' → 穿透 +' + pct(ex.defensePierce));
+    if (ex.followUpChance) lines.push('★' + k + ' → 追擊機率 +' + pct(ex.followUpChance));
+    if (ex.followUpMultiplier) lines.push('★' + k + ' → 追擊倍率 +' + pct(ex.followUpMultiplier));
+    if (ex.mark && ex.mark.damageTakenUp)
+      lines.push('★' + k + ' → 標記 受傷+' + pct(ex.mark.damageTakenUp) + ' / ' + (ex.mark.duration || '-') + 's');
+    if (ex.stun && ex.stun.duration)
+      lines.push('★' + k + ' → 暈眩 ' + ex.stun.duration + 's');
+    if (ex.nextSkillDamageUp) lines.push('★' + k + ' → 下一招傷害 +' + pct(ex.nextSkillDamageUp));
+    if (ex.selfBuff && ex.selfBuff.damageReduce)
+      lines.push('★' + k + ' → 自我減傷 ' + pct(ex.selfBuff.damageReduce.amount) + ' / ' + ex.selfBuff.damageReduce.duration + 's');
+
+    // 一般數值
+    if (ex.blockUp) lines.push('★' + k + ' → 格擋 +' + pct(ex.blockUp));
+    if (ex.healUp) lines.push('★' + k + ' → 受療 +' + pct(ex.healUp));
+    if (ex.recoveryReduce) lines.push('★' + k + ' → 壓制回復 ' + pct(ex.recoveryReduce));
+    if (ex.specialAttackDamage) lines.push('★' + k + ' → 奧義傷害 +' + pct(ex.specialAttackDamage));
+    if (ex.strongAgainstBonus) lines.push('★' + k + ' → 克制傷害 +' + pct(ex.strongAgainstBonus));
+    if (ex.dodgeUp) lines.push('★' + k + ' → 閃避率 +' + pct(ex.dodgeUp));
+    if (ex.critRateBonus) lines.push('★' + k + ' → 爆擊率 +' + pct(ex.critRateBonus));
+    if (ex.criticalDamageBonus) lines.push('★' + k + ' → 爆傷 +' + pct(ex.criticalDamageBonus));
+
+    // 真傷 / 減傷（物件）
+    if (typeof ex.trueDamage === 'number') lines.push('★' + k + ' → 追加真實傷害 ' + pct(ex.trueDamage));
+    if (ex.trueDamage && ex.trueDamage.ratio) lines.push('★' + k + ' → 追加真實傷害 ' + pct(ex.trueDamage.ratio));
+    if (ex.teamDamageReduce) lines.push('★' + k + ' → 全體減傷 ' + pct(ex.teamDamageReduce.amount) + ' / ' + ex.teamDamageReduce.duration + 's');
+    if (ex.guaranteedDodge) lines.push('★' + k + ' → 必定閃避 ' + ex.guaranteedDodge + ' 次');
+
+    // 武魂攻擊（主動/被動）
+    if (ex.pokemonAttackBonus) lines.push('★' + k + ' → 武魂攻擊 +' + pct(ex.pokemonAttackBonus));
+    if (ex.selfBuff && ex.selfBuff.statsUp && ex.selfBuff.statsUp.pokemonAttackBonus) {
+    var durStar = (ex.selfBuff.duration != null) ? (' / ' + ex.selfBuff.duration + 's') : '';
+    lines.push('★' + k + ' → 武魂攻擊 +' + pct(ex.selfBuff.statsUp.pokemonAttackBonus) + durStar);
+    }
+
+    // 你新增的鍵
+    if (ex.teamDamageReduceAura) lines.push('★' + k + ' → 常駐減傷光環 +' + pct(ex.teamDamageReduceAura));
+    if (ex.healBase != null) lines.push('★' + k + ' → 基礎治療 +' + ex.healBase);
+    if (ex.atkDown) lines.push('★' + k + ' → 降攻 ' + pct(ex.atkDown.amount) + ' / ' + ex.atkDown.duration + 's');
+    if (ex.pokemonCriticalRateBonus) lines.push('★' + k + ' → 武魂爆擊率 +' + pct(ex.pokemonCriticalRateBonus));
+    if (ex.pokemonCritDamageBonus) lines.push('★' + k + ' → 武魂爆傷 +' + pct(ex.pokemonCritDamageBonus));
+    if (ex.enemyCritRateDown) lines.push('★' + k + ' → 敵方爆擊率降低 ' + pct(ex.enemyCritRateDown));
+    if (ex.enemyCritDamageDown) lines.push('★' + k + ' → 敵方爆傷降低 ' + pct(ex.enemyCritDamageDown));
+    if (ex.execute && ex.execute.threshold != null && ex.execute.bonus != null)
+      lines.push('★' + k + ' → 斬殺：自身HP低於 ' + pct(ex.execute.threshold) + ' 時，增傷 ' + pct(ex.execute.bonus));
+    if (ex.selfBuff && ex.selfBuff.defensePierce != null)
+      lines.push('★' + k + ' → 自我穿透 +' + pct(ex.selfBuff.defensePierce) + ' / ' + (ex.selfBuff.duration || '-') + 's');
+    if (ex.payHpRatio) lines.push('★' + k + ' → 自損HP ' + pct(ex.payHpRatio));
+
+    // 條件效果
+    if (ex.conditional){
+      var c = ex.conditional;
+      if (c.ifTargetHpBelow != null && c.damageUp != null)
+        lines.push('★' + k + ' → 處決加成：目標HP低於 ' + pct(c.ifTargetHpBelow) + ' 時，增傷 ' + pct(c.damageUp));
+      if (c.ifTargetHpAbove != null && c.critRateBonus != null)
+        lines.push('★' + k + ' → 先手加成：目標HP高於 ' + pct(c.ifTargetHpAbove) + ' 時，爆擊率 +' + pct(c.critRateBonus));
+    }
+
+    // 未知鍵（debug）
+    var known = [
+      'forceCrit','defensePierce','followUpChance','followUpMultiplier','mark','stun',
+      'nextSkillDamageUp','selfBuff','trueDamage','teamDamageReduce','teamDamageReduceAura',
+      'conditional','specialAttackDamage','strongAgainstBonus','dodgeUp','critRateBonus',
+      'criticalDamageBonus','pokemonAttackBonus','pokemonCriticalRateBonus','pokemonCritDamageBonus',
+      'blockUp','healUp','healBase','recoveryReduce','guaranteedDodge','atkDown',
+      'enemyCritRateDown','enemyCritDamageDown','execute','payHpRatio'
+    ];
+    if (Object.keys(ex).some(function(key){ return known.indexOf(key) === -1; })) {
+      lines.push('★' + k + ' → ' + JSON.stringify(ex));
+    }
+  }
+  return lines.join('\n');
+}
+
+
+
+function card(s){
+  const tierTxt = mapTier(s.tier);
+  const eff = fmtEffects(s.effects, s);
+  const scaling = fmtScaling(s.scaling);
+  const starTitle = starTitleByType(s.type);
+  const starExtras = fmtStarExtras(s.upgrade);
+
+  return `<div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+      <h3 style="margin:0">${s.name}</h3><span class="pill">${tierTxt}</span>
+    </div>
+    <div style="opacity:.95;margin:6px 0 10px">${s.description||''}</div>
+
+    <div class="small" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+      <span>職業：${s.jobName||'—'}</span>
+      <span>類型：${mapType(s.type)}</span>
+      <span>目標：${mapTarget(s.target)}</span>
+      <span>冷卻：${s.cooldownSec??'-'}s</span>
+    </div>
+
+    <div class="section small">
+      <div><strong>效果：</strong>${eff || '—'}</div>
+      ${scaling ? ('<div>'+scaling+'</div>') : ''}
+    </div>
+
+    <details class="section"><summary>${starTitle}</summary>
+      <div class="small">${fmtStars(s.starSpread)}</div>
+      ${starExtras ? ('<div class="small" style="margin-top:6px"><strong>升星後效果：</strong><br/>'+starExtras.replace(/\n/g,'<br/>')+'</div>') : ''}
+    </details>
+  </div>`;
+}
+
+function apply(){
+  const q = (document.getElementById('q').value||'').toLowerCase();
+  const job = document.getElementById('job').value;
+  const type = document.getElementById('type').value;
+  const target = document.getElementById('target').value;
+  const tier = document.getElementById('tier').value;
+
+  FILTERED = ALL.filter(s=>{
+    if (q) {
+      // 不再以 ID 作為搜尋來源，避免外顯 ID
+      const hay = (s.name+' '+(s.jobName||'')+' '+(s.description||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (job && s.jobName !== job) return false;
+    if (type && s.type !== type) return false;
+    if (target && s.target !== target) return false;
+    if (tier && String(s.tier) !== tier) return false;
+    return true;
+  });
+
+  document.getElementById('grid').innerHTML = FILTERED.map(card).join('');
+}
+
+['q','job','type','target','tier'].forEach(id=>{
+  const el = document.getElementById(id);
+  if (el) { el.addEventListener('input', apply); el.addEventListener('change', apply); }
+});
+</script>
+</body></html>
